@@ -2,10 +2,11 @@
   "name": "mylodash",
   "version": "0.0.1",
   "description": "Hand-Made Lodash by David",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buuild": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
