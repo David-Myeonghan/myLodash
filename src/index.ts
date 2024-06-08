@@ -1,1 +1,3 @@
-export const hello = () => 'Hello World!';
+import find from "./find";
+
+export {find};
