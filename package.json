@@ -1,0 +1,27 @@
+{
+  "name": "mylodash",
+  "version": "0.0.1",
+  "description": "Hand-Made Lodash by David",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buuild": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Myeonghan/myLodash.git"
+  },
+  "keywords": [
+    "Lodash"
+  ],
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Myeonghan/myLodash/issues"
+  },
+  "homepage": "https://github.com/David-Myeonghan/myLodash#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  }
+}
