@@ -1,5 +1,6 @@
-type Predicate<T> = (item: T) => boolean | Partial<T> | [keyof T, unknown] | keyof T;
-export default function find<T>(collection: T[] | {[key: string]: T}, predicate: Predicate<T>): T | undefined {
+type Predicate<T> = ((item: T) => boolean) | Partial<T> | [keyof T, unknown] | keyof T;
+
+export default function find<T>(collection: T[] | { [key: string]: T }, predicate: Predicate<T>): T | undefined {
     const iterateeFunc = iteratee(predicate);
 
     if (Array.isArray(collection)) {
@@ -32,7 +33,7 @@ function iteratee<T>(predicate: Predicate<T>): (item: T) => boolean {
     return (_: T) => false;
 }
 
-function isMatch<T>(item: T, predicate: Partial<T>) :boolean {
+function isMatch<T>(item: T, predicate: Partial<T>): boolean {
     for (const key in predicate) {
         if (predicate[key] !== item[key]) {
             return false;
