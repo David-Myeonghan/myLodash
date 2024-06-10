@@ -24,7 +24,7 @@ function iteratee<T>(predicate: Predicate<T>): (item: T) => boolean {
         return predicate as (item: T) => boolean;
     } else if (typeof predicate === 'object' && !Array.isArray(predicate)) {
         return (item: T) => isMatch(item, predicate as Partial<T>);
-    } else if (Array.isArray(predicate)) {
+    } else if (Array.isArray(predicate) && predicate.length === 2) {
         const [key, value] = predicate as [keyof T, unknown];
         return (item: T) => item[key] === value;
     } else if (typeof predicate === 'string') {
